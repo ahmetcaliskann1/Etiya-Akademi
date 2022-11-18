@@ -1,5 +1,7 @@
 
 file= open("calisanList.txt","a")
+file2 = open("calisanList.txt","r")
+oku = file2.read()
 try:
     calisanSayi = int(input("Çalışan sayısını giriniz : "))
 
@@ -8,7 +10,7 @@ try:
         print(f"{i+1}. Çalışanın Adını Giriniz : ")
         calisanAd = input()
         print(f"{i+1}. Çalışanın SoyAdını Giriniz : ")
-        calisanSoyad = input()
+        calisanSoyad = str(input())
         print(f"{i+1}. Çalışanın Maaşını Giriniz : ")
         calisanMaas = float(input())
         calisanMaasConvert = str(calisanMaas)
@@ -22,5 +24,6 @@ finally:
     print("Program kapatılıyor...")
     file.close()
 
+print(oku)
 
 
