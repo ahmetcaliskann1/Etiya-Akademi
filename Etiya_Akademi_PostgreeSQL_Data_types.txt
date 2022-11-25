@@ -3,10 +3,10 @@ Sayısal Veri Tipleri
 smallint        (int2)	    2 byte	small-range integer	-32768 ile +32767 aralığındaki tam sayılar
 integer         (int4)	    4 byte	typical choice for intege	-2147483648 ile +2147483647 aralığındaki tam sayılar
 bigint          (int8)	    8 byte	large-range integer	-9223372036854775808 ile +9223372036854775807 aralığındaki tam sayılar
-decimal	        değişken	Kullanıcı tanımlı hassasiyet, mutlak	Ondalık ayracı öncesinde 131072 haneye kadar sonrasında 16383 haneye kadar
-numeric	        değişken	Kullanıcı tanımlı hassasiyet, mutlak	Ondalık ayracı öncesinde 131072 haneye kadar sonrasında 16383 haneye kadar
-real	        4 byte	    değişken ondalık hassasiyeti, mutlak değil	6 ondalık hane
-doubleprecision	4 byte	    değişken ondalık hassasiyeti, mutlak değil	15 ondalık hane
+decimal	        değişken	  Kullanıcı tanımlı hassasiyet, mutlak	Ondalık ayracı öncesinde 131072 haneye kadar sonrasında 16383 haneye kadar
+numeric	        değişken	  Kullanıcı tanımlı hassasiyet, mutlak	Ondalık ayracı öncesinde 131072 haneye kadar sonrasında 16383 haneye kadar
+real	                      4 byte	    değişken ondalık hassasiyeti, mutlak değil	6 ondalık hane
+doubleprecision	            4 byte	    değişken ondalık hassasiyeti, mutlak değil	15 ondalık hane
 
 
 Metinsel Veri Tipleri
@@ -29,12 +29,12 @@ Parasal bilgileri saklamak için PostgreSQL’de MONEY veri tipi kullanılabilir
 
 Tarih / Zaman Veri Tipleri
 
-timestamp [ (p) ] [ without time zone ]	8 byte	Tarih ve saat (zaman dilimi bilgisi hariç)	4713 MÖ	294276 MS	1 mikrosaniye / 14 hane
-timestamp [ (p) ] with time zone	    8 byte	Tarih ve saat (zaman dilimi bilgisi dahil)	4713 MÖ	294276 MS	1 mikrosaniye / 14 hane
-date	                                4 byte	Tarih	4713 MÖ	5874897 MS	1 gün
-time [ (p) ] [ without time zone ]	    8 byte	Saat (zaman dilimi bilgisi hariç)	00:00:00	24:00:00	1 mikrosaniye / 14 hane
-time [ (p) ] with time zone	            12 byte	Saat (zaman dilimi bilgisi dahil)	00:00:00 +1459	24:00:00-1459	1 mikrosaniye / 14 hane
-interval [ fields ] [ (p) ]	            16 byte	Zaman araligi	-178000000 yıl	178000000 yıl	1 mikrosaniye / 14 hane
+timestamp [ (p) ] [ without time zone ]	 8 byte	Tarih ve saat (zaman dilimi bilgisi hariç)	4713 MÖ	294276 MS	1 mikrosaniye / 14 hane
+timestamp [ (p) ] with time zone	       8 byte	Tarih ve saat (zaman dilimi bilgisi dahil)	4713 MÖ	294276 MS	1 mikrosaniye / 14 hane
+date	                                   4 byte	Tarih	4713 MÖ	5874897 MS	1 gün
+time [ (p) ] [ without time zone ]	     8 byte	Saat (zaman dilimi bilgisi hariç)	00:00:00	24:00:00	1 mikrosaniye / 14 hane
+time [ (p) ] with time zone	             12 byte	Saat (zaman dilimi bilgisi dahil)	00:00:00 +1459	24:00:00-1459	1 mikrosaniye / 14 hane
+interval [ fields ] [ (p) ]	             16 byte	Zaman araligi	-178000000 yıl	178000000 yıl	1 mikrosaniye / 14 hane
 
 Boolean Veri Tipleri
 
@@ -46,7 +46,7 @@ Network Adres Tipleri
 
 cidr	7 -   19 byte	IPv4 ve IPv6 ağlar
 inet	7 -   19 byte	IPv4 ve IPv6 ağlar / sunucular
-macaddr	      6 byte	MAC adresleri
+macaddr	    6 byte	MAC adresleri
 macaddr8	  8 byte	MAC adresleri (EUI-64 formatı)
 
 
@@ -54,10 +54,10 @@ Geometrik Veri Tipleri
 
 point	     16 byte	düzlemde bir nokta	(x,y)
 line	     32 byte	sonsuz doğru	{A,B,C}
-lseg		 32 byte	sonlu doğru parçası	((x1,y1),(x2,y2))
-box			 32 byte	dikdörtgensel kutu	((x1,y1),(x2,y2))
-path		 16+16n byte	kapalı hat (polygon)	((x1,y1),…)
-path		 16+16n byte	açık hat (polyline)	[(x1,y1),…]
+lseg		   32 byte	sonlu doğru parçası	((x1,y1),(x2,y2))
+box			   32 byte	dikdörtgensel kutu	((x1,y1),(x2,y2))
+path		   16+16n byte	kapalı hat (polygon)	((x1,y1),…)
+path		   16+16n byte	açık hat (polyline)	[(x1,y1),…]
 polygon		 40+16n byte	polygon	((x1,y1),…)
 circle		 24 byte	çember	<(x,y),r> merkezin koordinatları ve yarıçap
 
